@@ -10,7 +10,7 @@ public interface EmailMessageMapper {
 
      EmailMessageDto from(EmailMessageEntity entity);
 
-     EmailMessageEntity to(EmailMessageDto dto);
+     EmailMessageEntity to(EmailMessageDto entity);
 }
 
 

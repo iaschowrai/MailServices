@@ -24,4 +24,7 @@ public class EmailMessageEntity {
 
     @Column(columnDefinition = "TEXT")
     private String body;
+
+    @Enumerated(EnumType.STRING)
+    private EmailMessageStatus status;
 }
