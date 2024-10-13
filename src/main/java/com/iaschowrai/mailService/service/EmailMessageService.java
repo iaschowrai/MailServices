@@ -8,9 +8,6 @@ import com.iaschowrai.mailService.repository.EmailMessageRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
-import java.util.concurrent.Executor;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 @Service
 @RequiredArgsConstructor
@@ -19,11 +16,11 @@ public class EmailMessageService {
     private final EmailMessageMapper mapper;
     private final EmailMessageSenderService emailMessageSenderService;
 
-    private final ExecutorService executorService = Executors.newFixedThreadPool(20);
 
     public void create(EmailMessageDto emailMessageDto) {
         EmailMessageEntity entity = mapper.to(emailMessageDto);
         entity.setStatus(EmailMessageStatus.PENDING);
+
         repository.save(entity);
 
     }

@@ -30,6 +30,7 @@ public class EmailMessageSchedulerService {
                 entity.setStatus(EmailMessageStatus.SENDING);
                 repository.save(entity);
             }
+
             for (EmailMessageEntity entity : messageEntities) {
                 entity.setStatus(EmailMessageStatus.SENDING);
 
