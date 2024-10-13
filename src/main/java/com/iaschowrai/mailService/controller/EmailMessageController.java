@@ -1,5 +1,6 @@
 package com.iaschowrai.mailService.controller;
 
+import com.iaschowrai.mailService.data.BulkEmailMessageDto;
 import com.iaschowrai.mailService.data.EmailMessageDto;
 import com.iaschowrai.mailService.service.EmailMessageService;
 import lombok.RequiredArgsConstructor;
@@ -13,8 +14,8 @@ public class EmailMessageController {
     private final EmailMessageService emailMessageService;
 
     @PostMapping
-    public void create(@RequestBody EmailMessageDto emailMessageDto){
-        emailMessageService.create(emailMessageDto);
+    public void create(@RequestBody EmailMessageDto EmailMessageDto){
+        emailMessageService.create(EmailMessageDto);
 
     }
 }

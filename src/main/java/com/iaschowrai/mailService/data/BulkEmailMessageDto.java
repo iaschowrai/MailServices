@@ -3,11 +3,13 @@ package com.iaschowrai.mailService.data;
 
 import lombok.Data;
 
+import java.util.List;
+
 @Data
-public class EmailMessageDto {
+public class BulkEmailMessageDto {
 
     private String from;
-    private String to;
+    private List<String> to;
     private String subject;
     private String body;
 }
